@@ -68,6 +68,6 @@ public class Inventory {
 
     @Override
     public String toString() {
-        return String.format("%s - %s - %.2f - %s", sku, name, price, department);
+        return String.format("%s - %.2f - %s", name, price, department);
     }
 }

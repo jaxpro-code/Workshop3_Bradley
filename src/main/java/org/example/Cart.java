@@ -7,6 +7,12 @@ public class Cart {
 
     public List<Inventory> cart = new ArrayList<>();
 
+    public static void displayCart(List<Inventory> cart){
+        for(Inventory s : cart){
+            System.out.println(s.toString());
+        }
+    }
+
 
     public void addToCart(Inventory product){
         if(product.getQuantity() < 1) {
@@ -41,13 +47,17 @@ public class Cart {
     }
 
     public void printReceipt(List<Inventory> cart) {
+
         System.out.println("---- Receipt ----");
-        for(Inventory c:cart){
-            System.out.println(c.getName() + "      " + c.getPrice());
+
+        for (Inventory c : cart) {
+            System.out.printf("%-20s $%8.2f%n", c.getName(), c.getPrice());
         }
-        System.out.println("----------------"+
-                "\n Total           " + getCartTotal()+
-                "\n ---- Thank you ----");
+
+        System.out.println("----------------");
+        System.out.printf(" Total          $%8.2f%n", getCartTotal());
+        System.out.println("---- Thank you ----");
+
 
     }
 
