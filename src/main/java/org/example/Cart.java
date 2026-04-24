@@ -40,11 +40,7 @@ public class Cart {
         return total;
     }
 
-    public void printReceipt(<cart>) {
-        printReceipt(null);
-    }
-
-    public void printReceipt(Inventory List<cart>) {
+    public void printReceipt(List<Inventory> cart) {
         System.out.println("---- Receipt ----");
         for(Inventory c:cart){
             System.out.println(c.getName() + "      " + c.getPrice());
