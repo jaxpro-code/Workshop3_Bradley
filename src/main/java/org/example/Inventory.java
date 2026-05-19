@@ -70,4 +70,11 @@ public class Inventory {
     public String toString() {
         return String.format("%s - %.2f - %s", name, price, department);
     }
+
+    public static void homeScreen(){
+        System.out.println("\n1) Display Products" +
+                "\n2) Display Cart" +
+                "\n3) Exit");
+
+    }
 }
